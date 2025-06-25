@@ -1,3 +1,4 @@
+import { Tarea } from '../entity/Tarea';
 import { DataSource } from 'typeorm';
 
 export const AppDataSource = new DataSource({
@@ -7,7 +8,7 @@ export const AppDataSource = new DataSource({
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  entities: [],
+  entities: [Tarea],
   synchronize: true, // set to false in production
   logging: false,
 });
