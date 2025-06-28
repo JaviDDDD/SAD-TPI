@@ -1,6 +1,7 @@
 # Seminario Actualización DevOps - Trabajo Práctico Integrador
 
 **Aplicación Online** : https://sad-tpi-app.onrender.com/
+**Video Coloquio**: 
 
 ## Aplicación – Gestor de Tareas
 
@@ -152,5 +153,33 @@ Este sistema de monitoreo es extensible y escalable, y puede ser utilizado tambi
 
 ![alt text](diagrama.png)
 
-## Conclusiones y roles del equipo
+## Roles del Equipo
 
+- Javier Dojas
+  - Desarrollo Backend
+  - Pruebas Unitarias
+- Pablo Bari
+  - Desarrollo Frontend
+  - Monitoreo
+- Ignacio Fiora
+  - Dockerización
+  - IaC
+  - CI/CD
+
+## Conclusiones
+
+Este trabajo práctico integrador nos permitió recorrer de forma completa el ciclo de vida de una aplicación moderna, aplicando prácticas y herramientas clave del enfoque DevOps.
+
+Durante el desarrollo pudimos:
+
+- Diseñar y construir una aplicación web full stack, usando Angular en el frontend y Express.js + TypeORM en el backend.
+- Implementar una base de datos PostgreSQL de manera automática utilizando Terraform, integrando principios de Infraestructura como Código (IaC).
+- Dockerizar la aplicación en una imagen unificada, que contiene tanto el frontend compilado como el backend servidor.
+- Automatizar el flujo de integración y despliegue continuo (CI/CD) mediante GitHub Actions, Docker Hub y Render.
+- Incorporar monitoreo con Prometheus y Grafana Cloud, obteniendo métricas de rendimiento en tiempo real desde un entorno productivo.
+
+El proyecto nos permitió entender cómo conectar distintas herramientas y servicios para lograr una solución automatizada, confiable y escalable.
+
+Además de los aspectos técnicos, también valoramos el trabajo en equipo, la planificación de tareas y la toma de decisiones conjuntas. Logramos distribuir responsabilidades de manera equilibrada y mantener una comunicación constante durante todo el proceso.
+
+El resultado final fue una aplicación funcional, correctamente desplegada en la nube, monitoreada y preparada para escalar. Este enfoque DevOps puede ser reutilizado en proyectos futuros, facilitando tanto el desarrollo como el mantenimiento continuo del software.
