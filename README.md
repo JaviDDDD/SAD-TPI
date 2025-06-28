@@ -1,7 +1,13 @@
 # Seminario Actualización DevOps - Trabajo Práctico Integrador
 
-**Aplicación Online** : https://sad-tpi-app.onrender.com/
-**Video Coloquio**: 
+> **Aplicación Online** : https://sad-tpi-app.onrender.com/
+>   
+>   **Video Coloquio**: 
+
+## Integrantes
+- Pablo Bari
+- Ignacio Fiora
+- Javier Dojas
 
 ## Aplicación – Gestor de Tareas
 
