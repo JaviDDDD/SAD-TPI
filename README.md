@@ -4,10 +4,14 @@
 >   
 >   **Video Coloquio**: 
 
+---
+
 ## Integrantes
 - Pablo Bari
 - Ignacio Fiora
 - Javier Dojas
+
+---
 
 ## Aplicación – Gestor de Tareas
 
@@ -155,9 +159,13 @@ Toda la integración se realiza respetando las buenas prácticas de seguridad:
 
 Este sistema de monitoreo es extensible y escalable, y puede ser utilizado también para generar alertas o almacenar métricas históricas si el proyecto lo requiere en el futuro.
 
+---
+
 ## Diagrama Pipeline DevOps
 
 ![alt text](diagrama.png)
+
+---
 
 ## Roles del Equipo
 
@@ -171,6 +179,8 @@ Este sistema de monitoreo es extensible y escalable, y puede ser utilizado tambi
   - Dockerización
   - IaC
   - CI/CD
+
+--- 
 
 ## Conclusiones
 
