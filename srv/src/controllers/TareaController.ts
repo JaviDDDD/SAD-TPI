@@ -15,7 +15,8 @@ export class TareaController {
     this.router.get("/", this.handleGet.bind(this));
     this.router.post("/", this.handlePost.bind(this));
     this.router.delete("/:id", this.handleDelete.bind(this));
-    this.router.patch("/:id", this.handlePatch.bind(this));
+    this.router.patch("/completada/:id", this.handlePatchCompletada.bind(this));
+    this.router.patch("/activa/:id", this.handlePatchActiva.bind(this));
   }
 
   private async handleGet(req: Request, res: Response) {
@@ -76,7 +77,7 @@ export class TareaController {
     }
   }
 
-  private async handlePatch(req: Request, res: Response) {
+  private async handlePatchCompletada(req: Request, res: Response) {
     try {
       const id = req.params.id;
       if (!id) {
@@ -90,7 +91,29 @@ export class TareaController {
         return;
       }
 
-      tarea = await this.tareaService.toggleCompletada(tarea);
+      tarea = await this.tareaService.setCompletada(tarea);
+      res.status(200).json(tarea);
+    } catch (error) {
+      console.log(error);
+      res.status(500);
+    }
+  }
+
+  private async handlePatchActiva(req: Request, res: Response) {
+    try {
+      const id = req.params.id;
+      if (!id) {
+        res.status(400).send({ message: "La id es obligatoria" });
+        return;
+      }
+
+      let tarea = await this.tareaService.getById(id);
+      if (!tarea) {
+        res.status(404).send({ message: "Tarea no encontrada" });
+        return;
+      }
+
+      tarea = await this.tareaService.toggleActiva(tarea);
       res.status(200).json(tarea);
     } catch (error) {
       console.log(error);

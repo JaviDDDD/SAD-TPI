@@ -4,7 +4,6 @@ export class TareaService {
   async createTarea(nombre: string) {
     const tarea = Tarea.create({
       nombre: nombre,
-      completada: false,
     });
 
     return Tarea.save(tarea);
@@ -18,8 +17,20 @@ export class TareaService {
     return Tarea.findOne({ where: { id: id } });
   }
 
-  async toggleCompletada(tarea: Tarea) {
-    tarea.completada = !tarea.completada;
+  async toggleActiva(tarea: Tarea) {
+    if (tarea.activa) {
+      tarea.actividad += new Date().getTime() - tarea.updatedAt.getTime();
+    }
+    tarea.activa = !tarea.activa;
+    return Tarea.save(tarea);
+  }
+
+  async setCompletada(tarea: Tarea) {
+    if (tarea.activa) {
+      tarea.actividad += new Date().getTime() - tarea.updatedAt.getTime();
+    }
+    tarea.completada = true;
+    tarea.activa = false;
     return Tarea.save(tarea);
   }
 
