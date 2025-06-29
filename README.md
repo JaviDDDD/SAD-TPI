@@ -2,7 +2,7 @@
 
 > **Aplicación Online** : https://sad-tpi-app.onrender.com/
 >   
->   **Video Coloquio**: 
+> **Video Coloquio**: https://drive.google.com/drive/folders/1cTXFKNybpej0wC3AypwSmpEcpGBXQbtM?usp=sharing
 
 ---
 
